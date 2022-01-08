@@ -13,7 +13,7 @@ def generate_code():
 
 # Create your models here.
 class Channel(models.Model):
-    code = models.CharField(max_length=8, default="", unique=True)
+    code = models.CharField(max_length=8, default=generate_code, unique=True)
     host = models.CharField(max_length=50, unique=True)
     guest_pause = models.BooleanField(null=False, default=False)
     votes_skip = models.IntegerField(null=False, default=1)
