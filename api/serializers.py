@@ -5,3 +5,8 @@ class ChannelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Channel
         fields = ('id', 'code', 'host', 'guest_pause', 'votes_skip', 'created_on')
+
+class CreateChannelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Channel
+        fields = ('guest_pause', 'votes_skip')
