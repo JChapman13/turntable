@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ChannelJoinPage from "./ChannelJoinPage";
 import ChannelCreatePage from "./ChannelCreatePage";
+import Channel from "./Channel";
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,6 +22,7 @@ export default class HomePage extends Component {
             <Route path="/" element={<p>This is the homepage</p>} />
             <Route path="/join" element={<ChannelJoinPage />} />
             <Route path="/create" element={<ChannelCreatePage />} />
+            <Route path="/channel/:channelCode" element={<Channel />} />
           </Routes>
         </Router>
       </>
